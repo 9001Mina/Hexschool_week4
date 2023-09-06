@@ -1,0 +1,113 @@
+
+.navbar{
+    /* 這個是最外層 */
+        padding: 16px 0;
+        background: $primary;
+        
+        @include mobile {
+            padding-bottom: 0;
+        }
+
+    }
+    .navbar-wrap{
+    /* 導航列換行 注意！這要與container同一層，ul不需要加這個，因為平板+手機板時已改變資訊流流向*/
+        /* 桌機 */
+        display: flex;
+        justify-content: space-between;
+    
+        /* 助教這邊直接寫 平板+手機 直接讓導航列換行*/
+        @include mobile {
+            flex-direction: column;
+        
+            /* 移除左右邊padding，再加入max-width:100% 讓導航列變成滿版 */
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: -12px;
+            margin-right: -12px;
+            max-width: 100%;
+        }
+    }
+    .navbar-logo{
+    /* 導航列LOGO */
+        width: 80px;
+    
+        @include mobile {
+    
+            /* 上右下左 */
+            margin: 0 0 16px 16px;
+        }
+    }
+    .navbar-logo a{
+        display: block;
+        width: 80px;
+        height: 49px;
+        background: url(/assets/images/logo-white.png);
+        background-size: 80px 49px;
+        float: left;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .navbar-logo a:hover{
+        opacity: 0.7;
+    }
+    .navar-nav{
+    /* 設計ul選單的部分 */
+        display: flex;
+        align-items: center;
+    
+        /* 平板、手機直接換行 */
+        @include mobile {
+            flex-wrap: wrap;
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+    }
+    .navbar-item{
+    /* 設定li */
+        /* 桌機 */
+        height: 100%;
+    
+        /* 平板、手機 */
+        @include mobile {
+            /* 選單在手機板型上佔一半寬度(188)，所以375/2=187.5，四捨五入188，所以設定50% */
+            width: 50%;
+            
+            /* 因為換行的在設計稿上不需要再往右推出空間，所以就將margin-right改為0px */
+            margin-right: 0px;
+            
+            /* 設計稿上有線框 */
+            border: 1px solid #fff;
+            
+        }
+    }
+    .navbar-link{
+    /* 設定li裡的a (nav上的選單屬性) */
+        height: 100%;
+        
+        /* 把a改成區塊屬性 */
+        display: block;
+        
+        font-size: 20px;
+        color: #fff;
+        
+        /* 會這樣設定是要讓連結的範圍擴大一點，不要只有精準的點在文字上才可以連結 這個自己設定舒適的尺寸就行*/
+        padding: 8px 32px;
+    
+        @include mobile {
+            font-size: 16px;
+            text-align: center;
+    
+            /* 連結上下調整為padding 這個自己設定舒適的尺寸就行*/
+            padding: 12px 0;
+        }
+    }
+    .navbar-link:hover{
+    /* 設定滑過連結效果 */
+        /* 不透明度:不透明度 */
+        opacity: 0.7;
+    }
+    .navbar-item:last-child .navbar-link{
+    /* 這個是在桌機板，將導航列上最後一個項目及連結的padding-right改為0，最後一個不需要跟下一個有空間 */
+        padding-right: 0;
+    }

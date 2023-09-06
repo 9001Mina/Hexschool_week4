@@ -1,0 +1,135 @@
+.footer{
+  background: #AA0601;
+
+
+  @include mobile {
+    // .container{
+    //   margin-left: 24px;
+    //   margin-right: 24px;
+    // }
+  }
+}
+.footerLink{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.footerLinkMenu{
+  height: 48px;
+  display: flex;
+  align-items: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+
+  @include mobile {
+    margin-top: 0px;
+  }
+}
+
+.footerLinkMenu li a{
+  color: #FFF;
+  margin-right: 48px;
+
+  @include mobile {
+    display: none;
+    
+  }
+}
+.community{
+  display: flex;
+  margin-top: 48px;
+
+  @include mobile {
+    margin-top: 24px;
+  }
+}
+.communityIcon{
+  width: 64px;
+  margin-right: 32px;
+
+  // @media (max-width: 768px) {
+  //   width: 40px;
+  //   margin-right: 16px;
+  // }
+  // 20230813改為992px
+  @include pad {
+    width: 40px;
+    margin-right: 16px;
+  }
+
+  @include mobile {
+    width: 24px;
+  }
+}
+.communityIcon:last-child{
+  margin-right: 0;
+}
+.footerContact{
+
+  @include mobile {
+    margin-top: -48px;
+  }
+}
+.footerContact .footerTel, .footerMail{
+  color: #FFF;
+  font-size: 36px;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+.contactIconSite{
+  color: #FFF;
+  font-size: 36px;
+  margin-right: 22px;
+
+  @include mobile {
+    font-size: 18px;
+    margin-right: 11px;
+  }
+}
+.copyright{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #FFF;
+  margin-top: 32px;
+  padding: 32px 0;
+
+  @include mobile {
+    display: block;
+    margin-top: 24px;
+    padding: 16px 0 0 0;
+
+  }
+}
+.copyrightLink{
+  display: flex;
+
+  @include mobile {
+    display: block;
+    padding-bottom: 16px;
+  }
+}
+.copyrightText{
+  font-family: $enFont;
+  color: #FFF;
+
+  @include mobile {
+    margin-bottom: 8px;
+  }
+}
+.copyright li a{
+  font-size: 14px;
+  color: #FFF;
+
+  @include mobile {
+    margin-bottom: 8px;
+  }
+}
+.footer .container a:hover{
+  opacity: 0.7;
+}
+
+// 第四週作業footer iPad斷點全改為992px，mobile斷點改為768px

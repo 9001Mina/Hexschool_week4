@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- SCSS -->
+    <link rel="stylesheet" href="/assets/scss/all.scss">
+
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <div class="container">
+      <h2 class="subPageTitle">門市據點</h2>
+      <div class="dropDownCity">
+        <label for="dropDown" class="dropDownText">選擇地區
+        <select name="dropDown" id="dropDown" class="frame">
+          <option value="taipei">台北市</option>
+          <option value="taichung">台中市</option>
+          <option value="tainan">台南市</option>
+          <option value="kaohsiung">高雄市</option>
+        </select>
+      </label>
+      </div>
+      <div class="row">
+        <ul class="store">
+          <li class="storeItem col-4 col-lg-6 col-md-12 col-xs-4">
+            <img src="/assets/images/store-1.png" alt="storeImages">
+            <h4 class="storeName">台北中山旗艦店</h4>
+            <div class="contact">
+              <ul class="contactDetail">
+                <li class="phone">
+                  <a href="tel:+88620001234">
+                  <span class="material-symbols-outlined phoneImg">call</span>
+                  電話：(02)000-1234</a>
+                </li>
+                <li class="businessHours d-f">
+                  <span class="material-symbols-outlined clockImg">schedule</span>
+                  <p>營業時間：10:00-21:00</p>
+                </li>
+                <li class="address d-f">
+                  <span class="material-symbols-outlined flag">location_on</span>
+                  <address>地址：台北市中山區南京東路25巷2-1號</address>
+                </li>
+              </ul>
+              <button class="storeBtn" type="button">詳細資訊</button>
+            </div>
+          </li>
+          <li class="storeItem col-4 col-lg-6 col-md-12 col-xs-4">
+            <img src="/assets/images/store-2.png" alt="storeImages">
+            <h4 class="storeName">台北綠園店</h4>
+            <div class="contact">
+              <ul class="contactDetail">
+                <li class="phone">
+                  <a href="tel:+88620001234">
+                  <span class="material-symbols-outlined phoneImg">call</span>
+                  電話：(02)000-2345</a>
+                </li>
+                <li class="businessHours d-f">
+                  <span class="material-symbols-outlined clockImg">schedule</span>
+                  <p>營業時間：10:00-21:00</p>
+                </li>
+                <li class="address d-f">
+                  <span class="material-symbols-outlined flag">location_on</span>
+                  <address>地址：台北市中正區復興南路 132-1 號</address>
+                </li>
+              </ul>
+              <button class="storeBtn" type="button">詳細資訊</button>
+            </div>
+          </li>
+          <li class="storeItem col-4 col-lg-6 col-md-12 col-xs-4">
+            <img src="/assets/images/store-3.png" alt="storeImages">
+            <h4 class="storeName">台中清水旗艦店</h4>
+            <div class="contact">
+              <ul class="contactDetail">
+                <li class="phone">
+                  <a href="tel:+88620001234">
+                  <span class="material-symbols-outlined phoneImg">call</span>
+                  電話：(02)000-1234</a>
+                </li>
+                <li class="businessHours d-f">
+                  <span class="material-symbols-outlined clockImg">schedule</span>
+                  <p>營業時間：10:00-21:00</p>
+                </li>
+                <li class="address d-f">
+                  <span class="material-symbols-outlined flag">location_on</span>
+                  <address>地址：台中市清水區經南一路 23 號 8 樓</address>
+                </li>
+              </ul>
+              <button class="storeBtn" type="button">詳細資訊</button>
+            </div>
+          </li>
+          <li class="storeItem col-4 col-lg-6 col-md-12 col-xs-4">
+            <img src="/assets/images/store-4.png" alt="storeImages">
+            <h4 class="storeName">高雄中正形象店</h4>
+            <div class="contact">
+              <ul class="contactDetail">
+                <li class="phone">
+                  <a href="tel:+88620001234">
+                  <span class="material-symbols-outlined phoneImg">call</span>
+                  電話：(07)000-2345</a>
+                </li>
+                <li class="businessHours d-f">
+                  <span class="material-symbols-outlined clockImg">schedule</span>
+                  <p>營業時間：10:00-21:00</p>
+                </li>
+                <li class="address d-f">
+                  <span class="material-symbols-outlined flag">location_on</span>
+                  <address>地址：高雄市苓雅區中正路 38 號 12 樓</address>
+                </li>
+              </ul>
+              <button class="storeBtn" type="button">詳細資訊</button>
+            </div>
+          </li>
+          <li class="storeItem col-4 col-lg-6 col-md-12 col-xs-4">
+            <img src="/assets/images/store-5.png" alt="storeImages">
+            <h4 class="storeName">高雄夢時代店</h4>
+            <div class="contact">
+              <ul class="contactDetail">
+                <li class="phone">
+                  <a href="tel:+88620001234">
+                  <span class="material-symbols-outlined phoneImg">call</span>
+                  電話：(02)000-1234</a>
+                </li>
+                <li class="businessHours d-f">
+                  <span class="material-symbols-outlined clockImg">schedule</span>
+                  <p>營業時間：10:00-21:00</p>
+                </li>
+                <li class="address d-f">
+                  <span class="material-symbols-outlined flag">location_on</span>
+                  <address>地址：高雄市前鎮區中華一路 63 號 6 樓</address>
+                </li>
+              </ul>
+              <button class="storeBtn" type="button">詳細資訊</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

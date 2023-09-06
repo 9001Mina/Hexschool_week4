@@ -1,0 +1,151 @@
+.subPageTitle{
+    font-size: $font-2xl;
+    font-weight: bold;
+    border-left: 8px solid #9F1213;
+    padding-left: 16px;
+    margin-top: 96px;
+
+    @include mobile {
+        font-size: $font-l;
+        font-weight: bold;
+        height: 36px;
+    }
+}
+.store{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: space-between;
+
+    @include pad {
+        justify-content: space-between;
+    }
+
+    .storeItem{
+
+        height: 503px;
+        color: $storeText;
+        padding-right: 24px;
+        margin-bottom: 48px;
+    
+        @include mobile {
+            
+            padding-right: 0;
+            
+        }
+
+        img{
+            width: 100%;
+            height: 224px;
+            background-size: contain;
+            
+            border: 1px solid #00000020;
+        }
+        .storeName{
+            font-size: $font-l;
+            padding: 8px 0;
+            padding-left: 24px;
+            border: 1px solid #00000020;
+        }
+        .contact{
+            // 記得下高度才有空間可以space-between
+            height: 227px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #00000020;
+
+            
+            
+            .contactDetail{
+                font-size: $font-m;
+                padding: 16px 24px;
+                
+                .phone{
+                    margin-bottom: 8px;
+
+                    span{
+                        font-size: 18px;
+                        padding-right: 10px;
+                    }
+                }
+                .businessHours{
+                    margin-bottom: 8px;
+
+                    span{
+                        font-size: 20px;
+                        padding-top: 5px;
+                        padding-right: 11px;
+                    }
+                }
+                .address span{
+                    font-size: 20px;
+                    padding-top: 5px;
+                    padding-right: 11px;
+
+                }
+            }
+        }
+        
+        a{
+            color: #212529;
+        }
+        .storeBtn{
+            height: 59px;
+            color: #FFF;
+            background: #000;
+            border: 1px solid #000;
+            font-size: 19px;
+        }
+        .storeBtn:hover{
+            opacity: 0.7;
+        }
+    }
+
+}
+// 指定每三個物件就移除右推
+.store :nth-child(3n){
+	
+    padding-right: 0;
+
+    @include pad {
+        padding-right: 24px;
+    }
+
+    @include mobile {
+        padding-right: 0;
+    }
+
+    
+}
+
+// 補上面切換解析度推擠產生的問題
+.storeItem .contact{
+    @include pad {
+        padding-right: 0px;
+    }
+}
+// 網路上爬文找到解決jc-sb換行後中間出現空間的問題
+.store::after{
+    content: "";
+    width: 33.33%;
+
+    @media (max-width: 1336px) {
+        content: "";
+        width: 33.33%;
+    }
+    @include pad {
+        content: "";
+        width: 45%;
+    }
+    
+}
+.store :nth-child(2n){
+	
+    @include pad {
+        padding-right: 0;
+    }
+    
+    
+}

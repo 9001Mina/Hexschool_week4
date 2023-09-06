@@ -1,0 +1,36 @@
+.dropDownCity{
+    margin-top: 32px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+
+    .dropDownText{
+        font-size: $font-l;
+
+        @media (max-width: 768px) {
+            font-size: $font-base;
+        }
+    }
+    .frame{
+        width: 304px;
+        height: 38px;
+        font-size: $font-base;
+        color: #495057;
+        border: 1px solid #CED4DA;
+        margin-left: 16px;
+        padding-left: 12px;
+
+        @media (max-width: 768px) {
+            width: 276px;
+            margin-left: 8px;
+        }
+        @media (max-width: 395px) {
+            width: 256px;
+        }
+    }
+}
+

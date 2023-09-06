@@ -1,0 +1,137 @@
+// 全域設定
+*,*:before, *:after{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+	line-height: 1.5;
+}
+a{
+    text-decoration:none;
+}
+.container{
+    /* 桌機 */
+    max-width: 1320px;
+    /* 1320=1296+12+12 因為要左右留白，設計稿Gutter數值為24px，所以設定左右邊各為12px*/
+    margin: 0 auto;
+    padding: 0 12px;
+    /* 因為全域有設定border-box來維持盒形，所以max-width要將左右邊padding加回來 */
+    
+    @media (max-width:992px) {
+
+        max-width: 968px;
+		padding: 0 12px;
+		
+        
+    }
+
+    
+}
+// 共用
+.bg-primary{
+    background-color: $primary;
+}
+.row{
+    margin-left: -12px;
+    margin-right: -12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.px-3{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.d-f{
+    display: flex;
+}
+.ai-c{
+	align-items: center;
+}
+.mr-48{
+	margin-right: 48px;
+}
+// Column
+.col-3{
+    width: 25%;
+}
+.col-4{
+	width: 33.333%;
+}
+.col-6{
+	width: 50%;
+}
+.col-12{
+	width: 100%;
+}
+@include pad {
+    .col-lg-6{
+        width: 50%;
+    }
+    .col-lg-10{
+        width: 83.33%;
+    }
+    .mt-lg-2{
+        margin-top: 8px;
+    }
+    .mb-lg-6{
+        margin-bottom: 24px;
+    }
+    
+}
+@include mobile {
+    /* 768px 以下時變 6 欄 */
+    .col-md-6 {
+        width: 50%;
+    }
+    
+    .col-md-10{
+        width: 83.33%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }
+
+    /* 768px 以下時加入 margin-bottom ，讓垂直排列的元素間隔 24px */
+    .mb-md-6 {
+        margin-bottom: 24px;
+    }
+    .ms-md-3{
+        margin-left: 12px;
+    }
+}
+@media (max-width: 375px) {
+
+    .col-xs-12 {
+        width: 100%;
+    }
+    .col-xs-4{
+        width: 100%;
+    }
+}
+
+//font-size
+.h1-title{
+    font-size: $font-3xl;
+}
+.h2-title{
+    font-size: $font-2xl;
+}
+.h3-title{
+    font-size: $font-xl;
+}
+.h4-title{
+    font-size: $font-l;
+}
+.p-m{
+    font-size: $font-m;
+}
+.p-s{
+    font-size: $font-s;
+}
